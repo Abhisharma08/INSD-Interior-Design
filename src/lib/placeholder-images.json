@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-workspace",
+      "description": "Premium graphic design showcase",
+      "imageUrl": "https://ik.imagekit.io/fmldynl4j4/insd-awards/Gemini_Generated_Image_wy3si8wy3si8wy3s.png?tr=w-1800,fo-auto",
+      "imageHint": "creative design"
+    },
+    {
+      "id": "student-work",
+      "description": "Graphic design student working on professional project",
+      "imageUrl": "https://ik.imagekit.io/fmldynl4j4/insd-awards/Gemini_Generated_Image_u2ubidu2ubidu2ub.png?tr=w-1800,fo-auto",
+      "imageHint": "designer workspace"
+    },
+    {
+      "id": "branding-mockup",
+      "description": "Professional design awards and recognition",
+      "imageUrl": "https://ik.imagekit.io/fmldynl4j4/insd-awards/Screenshot%202026-03-10%20162457.png",
+      "imageHint": "design excellence"
+    },
+    {
+      "id": "ui-ux-design",
+      "description": "Mobile app UI/UX design process",
+      "imageUrl": "https://picsum.photos/seed/insd4/600/400",
+      "imageHint": "app design"
+    }
+  ]
+}
