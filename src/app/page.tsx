@@ -107,7 +107,7 @@ export default function LandingPage() {
         </section>
 
         {/* Mobile Lead Form Trigger (Visible on small screens) */}
-        <section className="lg:hidden p-4 bg-muted border-b">
+        <section id="top-form" className="lg:hidden p-4 bg-muted border-b">
           <LeadForm />
         </section>
 
