@@ -99,7 +99,7 @@ export default function LandingPage() {
                   * Limited Seats Available. Next batch starts soon.
                 </p>
               </div>
-              <div id="top-form" className="hidden lg:block">
+              <div className="hidden lg:block scroll-mt-20" id="top-form">
                 <LeadForm />
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function LandingPage() {
         </section>
 
         {/* Mobile Lead Form Trigger (Visible on small screens) */}
-        <section id="top-form" className="lg:hidden p-4 bg-muted border-b">
+        <section className="lg:hidden p-4 bg-muted border-b scroll-mt-20" id="top-form">
           <LeadForm />
         </section>
 
