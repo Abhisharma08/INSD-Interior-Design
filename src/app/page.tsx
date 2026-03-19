@@ -18,7 +18,6 @@ import {
   Lightbulb, 
   ShieldCheck, 
   ArrowRight,
-  Phone,
   Facebook,
   Instagram,
   Linkedin,
@@ -30,8 +29,6 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773820493/Final-Logo_exeo3n.png";
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/placeholder/800/600";
-const PHONE_NUMBER = "+91 77019 33935";
-const PHONE_URL = "tel:+917701933935";
 
 export default function LandingPage() {
   const heroImg = PlaceHolderImages.find(img => img.id === "hero-workspace");
@@ -276,7 +273,8 @@ export default function LandingPage() {
                     </div>
                     <div className="pt-4 mt-auto">
                       <Button 
-                        className="text-white font-bold text-sm group hover:translate-x-1 transition-transform bg-transparent hover:bg-white/10 px-0"
+                        variant="outline"
+                        className="w-full border-white/60 text-white font-bold text-sm bg-transparent hover:bg-white/10 hover:text-white"
                         onClick={() => {
                           scrollToLeadForm();
                         }}
@@ -432,17 +430,6 @@ export default function LandingPage() {
                   <p className="text-lg text-muted-foreground">
                     Have questions? Our experts are ready to guide you towards the right creative path.
                   </p>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-secondary p-3 rounded-full text-white">
-                        <Phone className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <div className="text-xs uppercase text-muted-foreground">Call Us</div>
-                        <div className="font-bold text-primary">{PHONE_NUMBER}</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <LeadForm />
               </div>
@@ -469,11 +456,6 @@ export default function LandingPage() {
           >
             Apply Now
           </Button>
-          <a href={PHONE_URL}>
-            <Button variant="outline" className="border-primary text-primary h-12 px-4">
-              <Phone className="h-5 w-5" />
-            </Button>
-          </a>
         </div>
       </div>
     </div>
