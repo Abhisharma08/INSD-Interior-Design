@@ -15,7 +15,7 @@ export default function ThankYouPage() {
           <Link href="/">
             <Image 
               src={LOGO_URL} 
-              alt="INSD PixelForge Logo" 
+              alt="INSD Logo" 
               width={180} 
               height={45} 
               className="h-10 w-auto object-contain"
@@ -36,7 +36,7 @@ export default function ThankYouPage() {
           <div className="space-y-4">
             <h1 className="text-3xl md:text-4xl font-headline text-primary">Application Received!</h1>
             <p className="text-lg text-muted-foreground">
-              Thank you for your interest in INSD PixelForge. Your details have been successfully submitted to our admissions team.
+              Thank you for your interest in INSD. Your details have been successfully submitted to our admissions team.
             </p>
           </div>
 

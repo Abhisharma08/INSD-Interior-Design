@@ -63,7 +63,7 @@ export default function LandingPage() {
           <Link href="/" className="flex items-center gap-2">
             <Image 
               src={LOGO_URL} 
-              alt="INSD PixelForge Logo" 
+              alt="INSD Logo" 
               width={200} 
               height={50} 
               className="h-10 w-auto object-contain"

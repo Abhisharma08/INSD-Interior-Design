@@ -1,4 +1,4 @@
-# **App Name**: INSD PixelForge
+# **App Name**: INSD
 
 ## Core Features:
 
