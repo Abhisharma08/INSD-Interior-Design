@@ -94,7 +94,7 @@ export default function LandingPage() {
 
       <main className="pt-20 pb-24 lg:pb-0 w-full">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-primary py-20 lg:py-32 w-full">
+        <section className="relative overflow-hidden bg-primary py-20 lg:py-20 w-full">
           <div className="absolute inset-0 opacity-10">
             <Image 
               src={heroImg?.imageUrl || DEFAULT_PLACEHOLDER} 
@@ -105,28 +105,50 @@ export default function LandingPage() {
               data-ai-hint="graphic design workspace"
             />
           </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75" />
           <div className="container mx-auto px-4 relative z-10 max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
               <div className="text-white space-y-6 w-full">
-                <Badge className="bg-secondary text-white border-none px-4 py-1 text-sm mb-4 animate-pulse">
+                <Badge className="bg-secondary text-white border-none px-4 py-1 text-sm mb-4 animate-pulse shadow-[0_0_18px_rgba(219,52,54,0.55)]">
                   Admissions Open 2026-27
                 </Badge>
-                <h1 className="text-4xl md:text-6xl font-headline leading-tight text-white">
-                  Turn Your Creativity Into a Career in <span className="text-secondary">Graphic Design</span>
+                <h1 className="text-4xl md:text-6xl font-headline leading-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)]">
+                  We Don’t Just Teach Design. We Build Careers
                 </h1>
-                <p className="text-xl text-white/90 max-w-xl">
-                  Master branding, digital design, and visual storytelling at INSD Delhi. Gain industry-ready skills and build a world-class portfolio.
+                <p className="text-xl text-white max-w-xl">
+                  Join INSD - India’s Skill School and build job-ready graphic design skills for a billion-dollar industry.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-secondary hover:bg-secondary/90 text-white font-bold text-lg px-8 h-14 w-full sm:w-auto"
-                    onClick={() => {
-                      scrollToLeadForm();
-                    }}
-                  >
-                    Apply Now
-                  </Button>
+                <div className="flex flex-wrap gap-2 max-w-2xl">
+                  {[
+                    "15 Years of Creative Excellence",
+                    "75+ Campuses",
+                    "23 States",
+                    "30,000 Students",
+                    "300+ Industry Partners",
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="inline-flex items-center gap-2 rounded-full bg-white/12 border border-white/35 px-3 py-1.5 text-sm font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.2)]"
+                    >
+                      <Star className="h-3.5 w-3.5 shrink-0 text-secondary" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-3 max-w-2xl">
+                  {[
+                    "100% Lifetime Placement Support",
+                    "2000+ Placements Last Year",
+                    "Packages up to ₹18 LPA",
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="inline-flex items-center gap-2 rounded-full bg-secondary text-white border border-secondary px-4 py-2 text-sm font-semibold shadow-[0_8px_20px_rgba(219,52,54,0.35)]"
+                    >
+                      <ShieldCheck className="h-4 w-4 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
                 <p className="text-sm italic text-white/70">
                   * Limited Seats Available. Next batch starts soon.
@@ -159,19 +181,18 @@ export default function LandingPage() {
               </div>
               <div className="space-y-6">
                 <SectionHeader 
-                  title="Design is Not Just Art. It’s Impact." 
-                  subtitle="In a world driven by visuals, your ability to communicate through design determines your career success."
+                  title="Skills. Careers. Placements. Come First." 
+                  subtitle="At INSD, we don’t believe in just teaching software or theory. We focus on what truly matters - skills, careers, and placements."
                   centered={false}
                 />
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Graphic design isn't just about making things look pretty—it's about branding, advertising, and capturing attention in a split second. Our curriculum is designed to transform you into an industry-ready professional who understands the 'why' behind every pixel.
+                  We Build Professionals. Not Just Designers. From day one, your learning is focused on one goal: getting you job-ready and helping you earn.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Practical-first learning approach",
-                    "Industry-standard tools and techniques",
-                    "Real-world client project simulations",
-                    "Mentorship from experienced design leaders"
+                    "Skills over degrees",
+                    "Careers over courses",
+                    "Industry readiness over theory"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-primary font-medium">
                       <ShieldCheck className="text-secondary h-6 w-6" />
@@ -188,17 +209,17 @@ export default function LandingPage() {
         <section className="py-20 bg-muted w-full">
           <div className="container mx-auto px-4 max-w-7xl">
             <SectionHeader 
-              title="What You Will Learn" 
-              subtitle="Learn to communicate visually with purpose through our comprehensive modules."
+              title="Design is Not Just Creative. It’s a Billion-Dollar Industry." 
+              subtitle="Graphic design is powering India’s digital growth."
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: <Palette className="h-8 w-8" />, title: "Branding & Visual Identity", desc: "Create logos, color palettes, and brand guidelines that resonate." },
-                { icon: <Monitor className="h-8 w-8" />, title: "Social Media & Digital Design", desc: "Design high-converting visuals for Instagram, Facebook, and Web." },
-                { icon: <Type className="h-8 w-8" />, title: "Typography & Layout", desc: "Master the art of arranging text and images for maximum impact." },
-                { icon: <Layout className="h-8 w-8" />, title: "Adobe Design Tools", desc: "Expert training in Photoshop, Illustrator, and InDesign." },
-                { icon: <Smartphone className="h-8 w-8" />, title: "UI/UX Basics", desc: "Understand user experience and interface design fundamentals." },
-                { icon: <Briefcase className="h-8 w-8" />, title: "Portfolio Development", desc: "Build a professional portfolio that lands you high-paying jobs." },
+                { icon: <Palette className="h-8 w-8" />, title: "Digital Growth", desc: "India’s digital and e-commerce sector is rapidly expanding." },
+                { icon: <Monitor className="h-8 w-8" />, title: "Branding Demand", desc: "Businesses are increasing investment in branding and digital marketing." },
+                { icon: <Type className="h-8 w-8" />, title: "Career Demand", desc: "Designers are in demand across startups, agencies, content platforms, and global brands." },
+                { icon: <Layout className="h-8 w-8" />, title: "Career-Ready Skill", desc: "Graphic Design = Career-Ready Skill." },
+                { icon: <Smartphone className="h-8 w-8" />, title: "Growth Potential", desc: "If you have the right skills, the opportunities to work, grow, and earn are endless." },
+                { icon: <Briefcase className="h-8 w-8" />, title: "Future Scope", desc: "A strong design foundation opens long-term opportunities across industries." },
               ].map((item, i) => (
                 <Card key={i} className="group hover:shadow-xl transition-all duration-300 border-none">
                   <CardContent className="p-8 space-y-4">
@@ -218,17 +239,17 @@ export default function LandingPage() {
         <section className="py-20 bg-white w-full">
           <div className="container mx-auto px-4 max-w-7xl">
             <SectionHeader 
-              title="Why Choose INSD" 
-              subtitle="We don't just teach design; we build careers."
+              title="Build Job-Ready Skills for Real Industry Roles" 
+              subtitle="This program is designed to make you a professional graphic designer, not just someone who knows tools."
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: <GraduationCap />, title: "Industry-Oriented Curriculum", desc: "Stay ahead with tools and trends actually used in the industry today." },
-                { icon: <Lightbulb />, title: "Hands-on Practical Training", desc: "No boring lectures. Just creation, iteration, and improvement." },
-                { icon: <Users />, title: "Experienced Mentors", desc: "Learn directly from professionals who work with top brands." },
-                { icon: <Star />, title: "Real-world Projects", desc: "Work on live briefs to understand the client-designer dynamic." },
-                { icon: <Layout />, title: "Modern Learning Environment", desc: "State-of-the-art labs and collaborative design studios." },
-                { icon: <ShieldCheck />, title: "100% Placement Focus", desc: "Our dedicated team works tirelessly to get you placed in top agencies." },
+                { icon: <GraduationCap />, title: "Branding & Visual Identity", desc: "Build strong brand thinking and visual language skills." },
+                { icon: <Lightbulb />, title: "Social Media & Digital Design", desc: "Create engaging digital creatives for modern platforms." },
+                { icon: <Users />, title: "Typography & Layout Systems", desc: "Master structure, hierarchy, readability, and composition." },
+                { icon: <Star />, title: "Adobe Photoshop, Illustrator & InDesign", desc: "Gain practical command over industry-standard tools." },
+                { icon: <Layout />, title: "UI/UX Fundamentals", desc: "Understand user-centric interface and experience basics." },
+                { icon: <ShieldCheck />, title: "Portfolio & Live Projects", desc: "Job-ready learning starts from Day 1." },
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 rounded-xl border border-muted hover:border-secondary/30 hover:bg-muted/30 transition-all flex gap-4">
                   <div className="bg-primary/5 p-3 rounded-lg h-fit text-primary">
@@ -248,17 +269,17 @@ export default function LandingPage() {
         <section className="py-20 bg-primary text-white w-full">
           <div className="container mx-auto px-4 max-w-7xl">
             <SectionHeader 
-              title="Explore Our Programs" 
-              subtitle="Find the perfect path for your design journey, regardless of your current experience level."
+              title="Choose Your Path. Build Your Career." 
+              subtitle="No matter where you start - the outcome is the same: Industry-ready skills. Career opportunities. Placement support."
               light
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               {[
-                { title: "Under Graduate", duration: "3-4 Years", eligibility: "10+2", desc: "Comprehensive foundation for beginners." },
-                { title: "Post Graduate", duration: "2 Years", eligibility: "Any 3 year Design Graduation", desc: "Advanced specialisation for graduates." },
+                { title: "Under Graduate Programs", duration: "3-4 Years", eligibility: "10+2", desc: "Comprehensive foundation for beginners." },
+                { title: "Post Graduate Programs", duration: "2 Years", eligibility: "Any 3 year Design Graduation", desc: "Advanced specialization for graduates." },
                 { title: "Advanced Diploma", duration: "1-2 Years", eligibility: "Any 10+2", desc: "Intensive industry-focused training." },
                 { title: "Diploma", duration: "1 Year", eligibility: "Any 10+2", desc: "Quick start into the design industry." },
-                { title: "Short Term", duration: "3-6 Months", eligibility: "Short Term Fashion Design Course", desc: "Skill-specific certification courses." },
+                { title: "Short Term Courses", duration: "3-6 Months", eligibility: "Any 10+2", desc: "Skill-specific certification courses." },
               ].map((item, i) => (
                 <Card key={i} className="bg-white/10 border-white/20 hover:bg-white/20 transition-all group">
                   <CardContent className="p-6 text-center flex flex-col h-full">
@@ -295,19 +316,16 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
                 <SectionHeader 
-                  title="Future-Proof Your Career" 
-                  subtitle="Designers are in high demand across every digital-first industry."
+                  title="Turn Your Skills Into Real Opportunities" 
+                  subtitle="With the right skills, you can build a strong career as:"
                   centered={false}
                 />
-                <p className="text-lg text-muted-foreground">
-                  Our graduates don't just find jobs; they build influential careers in top creative fields.
-                </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    "Graphic Designer", "UI/UX Designer", 
-                    "Brand Consultant", "Art Director", 
-                    "Web Designer", "Creative Lead", 
-                    "Motion Designer", "Freelance Artist"
+                    "Graphic Designer", "Visual Designer", 
+                    "Brand Designer", "UI/UX Designer", 
+                    "Social Media Designer", "Freelancer", 
+                    "Creative Entrepreneur", "Employee or Employer - Your Choice"
                   ].map((job, i) => (
                     <div key={i} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                       <div className="w-2 h-2 rounded-full bg-secondary" />
@@ -342,38 +360,60 @@ export default function LandingPage() {
         <section className="py-20 bg-muted w-full">
           <div className="container mx-auto px-4 max-w-7xl text-center">
             <SectionHeader 
-              title="Placement & Career Support" 
-              subtitle="We bridge the gap between your education and your first professional paycheck."
+              title="From Learning to Earning" 
+              subtitle="At INSD, we don’t stop at training - we help you launch your career successfully."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: "100% Support", desc: "Dedicated placement assistance until you get hired." },
-                { title: "Portfolio Building", desc: "Review sessions to ensure your work stands out." },
-                { title: "Mock Interviews", desc: "Build confidence with professional interview prep." },
-                { title: "Industry Exposure", desc: "Regular visits to top agencies and design studios." },
+                { title: "100% Lifetime Placement Support", desc: "Dedicated placement assistance designed for long-term career growth." },
+                { title: "2000+ Successful Placements Last Year", desc: "A proven track record of helping students move from learning to earning." },
+                { title: "Top Packages up to ₹18 LPA", desc: "Strong opportunities for high-growth and high-reward design careers." },
               ].map((item, i) => (
                 <div key={i} className="space-y-2">
-                  <div className="text-4xl font-headline text-secondary mb-2">{item.title}</div>
+                  <div className="text-3xl font-headline text-secondary mb-2">{item.title}</div>
                   <div className="text-muted-foreground">{item.desc}</div>
                 </div>
               ))}
             </div>
-            <div className="mt-12 p-8 bg-white rounded-2xl border flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto shadow-sm">
-              <div className="text-left space-y-2">
-                <h4 className="text-xl font-headline text-primary">Want to see our students' work?</h4>
-                <p className="text-muted-foreground">Download our brochure and portfolio highlights.</p>
+            <div className="mt-12 p-1 rounded-2xl bg-gradient-to-r from-primary/20 via-secondary/15 to-primary/20 max-w-5xl mx-auto shadow-sm">
+              <div className="rounded-[15px] bg-white/95 backdrop-blur-sm border border-primary/10 p-6 md:p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-[1.7fr_auto] gap-6 md:gap-8 items-center">
+                  <div className="text-left space-y-3">
+                    <h4 className="text-2xl font-headline text-primary leading-tight">Industry-Focused Training That Makes You Job-Ready</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {[
+                        "Skill-based education",
+                        "Industry-driven curriculum",
+                        "Hands-on practical training",
+                        "Real-world projects",
+                        "Portfolio that gets you hired.",
+                      ].map((point, i) => (
+                        <div key={i} className="flex items-start gap-2 text-muted-foreground">
+                          <ShieldCheck className="h-4 w-4 text-secondary mt-0.5 shrink-0" />
+                          <span className="leading-relaxed">{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-auto">
+                    <div className="h-px bg-primary/15 mb-4 lg:hidden" />
+                    <div className="flex justify-start lg:justify-end">
+                      <Link href="#lead-form">
+                        <Button 
+                          variant="outline"
+                          className="w-full lg:w-auto border-primary text-primary bg-white hover:bg-primary/5 px-8 h-12 whitespace-normal text-center font-semibold"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            scrollToLeadForm();
+                          }}
+                        >
+                          Because Skills, Careers & Placements Come First.
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <Link href="#lead-form">
-                <Button 
-                  className="bg-primary text-white hover:bg-primary/90 px-8 h-12"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToLeadForm();
-                  }}
-                >
-                  Download Brochure
-                </Button>
-              </Link>
             </div>
           </div>
         </section>
@@ -381,9 +421,9 @@ export default function LandingPage() {
         {/* Final CTA */}
         <section className="py-24 bg-white relative overflow-hidden w-full">
           <div className="container mx-auto px-4 max-w-7xl text-center space-y-8 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-headline text-primary">Start Designing Your Future Today</h2>
+            <h2 className="text-4xl md:text-5xl font-headline text-primary">Your Future Won’t Wait</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join the community of next-generation designers at INSD Delhi. The next batch starts soon—don't miss out!
+              The right skills can change everything. The right training can help you start earning. Don’t just learn design - build a career in design.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
@@ -393,7 +433,7 @@ export default function LandingPage() {
                   scrollToLeadForm();
                 }}
               >
-                Apply Now
+                Start Your Career in Design Today
               </Button>
               <Button 
                 variant="outline" 
@@ -403,7 +443,7 @@ export default function LandingPage() {
                   scrollToLeadForm();
                 }}
               >
-                Get Course Details
+                Learn More
               </Button>
               <Button 
                 variant="ghost" 
@@ -413,10 +453,10 @@ export default function LandingPage() {
                   scrollToLeadForm();
                 }}
               >
-                Talk to a Counsellor
+                Enquire Now
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">No spam. Only professional career guidance.</p>
+            <p className="text-sm text-muted-foreground">Don’t wait to transform your creativity into a career.</p>
           </div>
         </section>
 
@@ -426,9 +466,12 @@ export default function LandingPage() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-headline text-primary">Connect With Us</h2>
+                  <h2 className="text-3xl font-headline text-primary">Are you ready to start learning job-ready skills?</h2>
                   <p className="text-lg text-muted-foreground">
-                    Have questions? Our experts are ready to guide you towards the right creative path.
+                    Get industry-focused training, career support, and placement assistance. Fill in your details and take the first step towards your future.
+                  </p>
+                  <p className="text-base font-semibold text-primary">
+                    Launch Your Career. Not Just a Course.
                   </p>
                 </div>
                 <LeadForm />
