@@ -139,7 +139,7 @@ export default function LandingPage() {
                   {[
                     "100% Lifetime Placement Support",
                     "2000+ Placements Last Year",
-                    "Packages up to ₹18 LPA",
+                    "Packages upto ₹18 LPA",
                   ].map((item, i) => (
                     <div
                       key={i}
