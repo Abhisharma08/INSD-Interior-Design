@@ -182,12 +182,10 @@ export default function LandingPage() {
               <div className="space-y-6">
                 <SectionHeader 
                   title="Skills. Careers. Placements. Come First." 
-                  subtitle="At INSD, we don’t believe in just teaching software or theory. We focus on what truly matters - skills, careers, and placements."
+                  subtitle="At INSD, we focus on what truly matters: skills, careers, and placements."
                   centered={false}
                 />
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We Build Professionals. Not Just Designers. From day one, your learning is focused on one goal: getting you job-ready and helping you earn.
-                </p>
+             
                 <ul className="space-y-4">
                   {[
                     "Skills over degrees",
@@ -200,6 +198,12 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
+                <p className="text-lg font-semibold text-primary mt-4">
+                  We build professionals, not just designers.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-2">
+                  From day one, your learning is focused on making you job-ready and helping you earn.
+                </p>
               </div>
             </div>
           </div>
@@ -208,29 +212,29 @@ export default function LandingPage() {
         {/* What You Will Learn */}
         <section className="py-20 bg-muted w-full">
           <div className="container mx-auto px-4 max-w-7xl">
-            <SectionHeader 
-              title="Design is Not Just Creative. It’s a Billion-Dollar Industry." 
-              subtitle="Graphic design is powering India’s digital growth."
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { icon: <Palette className="h-8 w-8" />, title: "Digital Growth", desc: "India’s digital and e-commerce sector is rapidly expanding." },
-                { icon: <Monitor className="h-8 w-8" />, title: "Branding Demand", desc: "Businesses are increasing investment in branding and digital marketing." },
-                { icon: <Type className="h-8 w-8" />, title: "Career Demand", desc: "Designers are in demand across startups, agencies, content platforms, and global brands." },
-                { icon: <Layout className="h-8 w-8" />, title: "Career-Ready Skill", desc: "Graphic Design = Career-Ready Skill." },
-                { icon: <Smartphone className="h-8 w-8" />, title: "Growth Potential", desc: "If you have the right skills, the opportunities to work, grow, and earn are endless." },
-                { icon: <Briefcase className="h-8 w-8" />, title: "Future Scope", desc: "A strong design foundation opens long-term opportunities across industries." },
-              ].map((item, i) => (
-                <Card key={i} className="group hover:shadow-xl transition-all duration-300 border-none">
-                  <CardContent className="p-8 space-y-4">
-                    <div className="text-secondary group-hover:scale-110 transition-transform duration-300">
-                      {item.icon}
-                    </div>
-                    <h3 className="text-xl font-headline text-primary">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div className="space-y-6">
+                <SectionHeader 
+                  title="Graphic Design is Powering India’s Digital Growth" 
+                  subtitle="India’s digital and e-commerce sector is rapidly expanding."
+                  centered={false}
+                />
+                <ul className="list-disc list-inside space-y-2 text-lg text-muted-foreground">
+                  <li>India’s digital and e-commerce sector is rapidly expanding</li>
+                  <li>Businesses are increasing investment in branding and digital marketing</li>
+                  <li>Designers are in demand across startups, agencies, content platforms, and global brands</li>
+                </ul>
+                <p className="text-xl font-semibold text-primary">Graphic Design = Career-Ready Skill</p>
+                <p className="text-lg text-muted-foreground">With the right skills, you can work, grow, and earn.</p>
+              </div>
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={brandingImg?.imageUrl || DEFAULT_PLACEHOLDER}
+                  alt="Graphic design showcase"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -310,120 +314,12 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Career Opportunities */}
-        <section className="py-20 bg-white overflow-hidden w-full">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-6">
-                <SectionHeader 
-                  title="Turn Your Skills Into Real Opportunities" 
-                  subtitle="With the right skills, you can build a strong career as:"
-                  centered={false}
-                />
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    "Graphic Designer", "Visual Designer", 
-                    "Brand Designer", "UI/UX Designer", 
-                    "Social Media Designer", "Freelancer", 
-                    "Creative Entrepreneur", "Employee or Employer - Your Choice"
-                  ].map((job, i) => (
-                    <div key={i} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
-                      <div className="w-2 h-2 rounded-full bg-secondary" />
-                      <span className="font-medium text-primary">{job}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-                    <Image src={brandingImg?.imageUrl || DEFAULT_PLACEHOLDER} alt="Branding" fill className="object-cover" />
-                  </div>
-                  <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
-                    <Image src={uiImg?.imageUrl || DEFAULT_PLACEHOLDER} alt="UI Design" fill className="object-cover" />
-                  </div>
-                </div>
-                <div className="space-y-4 pt-12">
-                  <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
-                    <Image src={heroImg?.imageUrl || DEFAULT_PLACEHOLDER} alt="Portfolio" fill className="object-cover" />
-                  </div>
-                  <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-                    <Image src={studentImg?.imageUrl || DEFAULT_PLACEHOLDER} alt="Placement" fill className="object-cover" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Placement Section */}
-        <section className="py-20 bg-muted w-full">
-          <div className="container mx-auto px-4 max-w-7xl text-center">
-            <SectionHeader 
-              title="From Learning to Earning" 
-              subtitle="At INSD, we don’t stop at training - we help you launch your career successfully."
-            />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { title: "100% Lifetime Placement Support", desc: "Dedicated placement assistance designed for long-term career growth." },
-                { title: "2000+ Successful Placements Last Year", desc: "A proven track record of helping students move from learning to earning." },
-                { title: "Top Packages up to ₹18 LPA", desc: "Strong opportunities for high-growth and high-reward design careers." },
-              ].map((item, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="text-3xl font-headline text-secondary mb-2">{item.title}</div>
-                  <div className="text-muted-foreground">{item.desc}</div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-12 p-1 rounded-2xl bg-gradient-to-r from-primary/20 via-secondary/15 to-primary/20 max-w-5xl mx-auto shadow-sm">
-              <div className="rounded-[15px] bg-white/95 backdrop-blur-sm border border-primary/10 p-6 md:p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-[1.7fr_auto] gap-6 md:gap-8 items-center">
-                  <div className="text-left space-y-3">
-                    <h4 className="text-2xl font-headline text-primary leading-tight">Industry-Focused Training That Makes You Job-Ready</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {[
-                        "Skill-based education",
-                        "Industry-driven curriculum",
-                        "Hands-on practical training",
-                        "Real-world projects",
-                        "Portfolio that gets you hired.",
-                      ].map((point, i) => (
-                        <div key={i} className="flex items-start gap-2 text-muted-foreground">
-                          <ShieldCheck className="h-4 w-4 text-secondary mt-0.5 shrink-0" />
-                          <span className="leading-relaxed">{point}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="w-full lg:w-auto">
-                    <div className="h-px bg-primary/15 mb-4 lg:hidden" />
-                    <div className="flex justify-start lg:justify-end">
-                      <Link href="#lead-form">
-                        <Button 
-                          variant="outline"
-                          className="w-full lg:w-auto border-primary text-primary bg-white hover:bg-primary/5 px-8 h-12 whitespace-normal text-center font-semibold"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            scrollToLeadForm();
-                          }}
-                        >
-                          Because Skills, Careers & Placements Come First.
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Final CTA */}
         <section className="py-24 bg-white relative overflow-hidden w-full">
           <div className="container mx-auto px-4 max-w-7xl text-center space-y-8 relative z-10">
             <h2 className="text-4xl md:text-5xl font-headline text-primary">Your Future Won’t Wait</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The right skills can change everything. The right training can help you start earning. Don’t just learn design - build a career in design.
+              The right skills can help you start earning.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
