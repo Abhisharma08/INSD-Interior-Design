@@ -42,6 +42,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  basePath: '/graphic-design-course',
 };
 
 export default nextConfig;
