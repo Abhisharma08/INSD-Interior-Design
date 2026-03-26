@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/design-courses-delhi",
-      "destination": "https://insd-landing-page-tau.vercel.app"
+      "source": "/design-courses-delhi/:path*",
+      "destination": "https://insd-landing-page-tau.vercel.app/:path*"
     }
   ]
 }
