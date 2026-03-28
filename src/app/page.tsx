@@ -28,10 +28,10 @@ import SectionHeader from "@/components/SectionHeader"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773820493/Final-Logo_exeo3n.png";
+const HERO_BG_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774679097/P1510960_1_1_1_wrknkg.jpg";
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/placeholder/800/600";
 
 export default function LandingPage() {
-  const heroImg = PlaceHolderImages.find(img => img.id === "hero-workspace");
   const studentImg = PlaceHolderImages.find(img => img.id === "student-work");
   const brandingImg = PlaceHolderImages.find(img => img.id === "branding-mockup");
   const uiImg = PlaceHolderImages.find(img => img.id === "ui-ux-design");
@@ -95,9 +95,9 @@ export default function LandingPage() {
       <main className="pt-20 pb-24 lg:pb-0 w-full">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-primary py-20 lg:py-20 w-full">
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-200">
             <Image 
-              src={heroImg?.imageUrl || DEFAULT_PLACEHOLDER} 
+              src={HERO_BG_URL}
               alt="Design Workspace" 
               fill 
               className="object-cover"

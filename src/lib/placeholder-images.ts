@@ -9,19 +9,19 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "hero-workspace",
     "description": "Premium graphic design showcase",
-    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774270609/graphic_xzakau.png",
+    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774678825/P1509595_1_ag1d3h.jpg",
     "imageHint": "creative design"
   },
   {
     "id": "student-work",
     "description": "Graphic design student working on professional project",
-    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774271262/result_0_piixkj.png",
+    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774678816/Copy_of_page_31_1_1_vfxoxl.jpg",
     "imageHint": "designer workspace"
   },
   {
     "id": "branding-mockup",
     "description": "Professional design awards and recognition",
-    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774271263/f048846c-e459-472a-9d0c-5f2f57cc01e0_yxodcc.png",
+    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774678825/P1509595_1_ag1d3h.jpg",
     "imageHint": "design excellence"
   },
   {
