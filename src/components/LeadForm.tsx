@@ -19,6 +19,7 @@ const formSchema = z.object({
   phone: z.string().min(10, { message: "Enter a valid 10-digit phone number." }).max(12),
   email: z.string().email({ message: "Please enter a valid email address." }),
   city: z.string().min(2, { message: "Please enter your city." }),
+  lead_source: z.string(),
   courseInterest: z.string({ required_error: "Please select a course." }),
 })
 
@@ -36,6 +37,7 @@ export default function LeadForm({ className }: { className?: string }) {
       phone: "",
       email: "",
       city: "",
+      lead_source: "Graphic Landing Page",
       courseInterest: "",
     },
   })
@@ -76,7 +78,7 @@ export default function LeadForm({ className }: { className?: string }) {
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          {/* ... (Your form fields remain exactly the same) ... */}
+          <input type="hidden" {...form.register("lead_source")} />
           <FormField
             control={form.control}
             name="name"
