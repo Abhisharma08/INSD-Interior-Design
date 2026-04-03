@@ -25,7 +25,7 @@ export default function RootLayout({
           }}
         />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18038800208"
+          src="https://www.googletagmanager.com/gtag/js?id=K6TRCZN5"
           strategy="afterInteractive"
         />
         <Script
@@ -35,7 +35,7 @@ export default function RootLayout({
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'AW-18038800208');`,
+gtag('config', 'K6TRCZN5');`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
