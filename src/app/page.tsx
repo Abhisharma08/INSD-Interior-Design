@@ -299,23 +299,18 @@ export default function LandingPage() {
 
         <section id="lead-form" className="w-full bg-muted py-10" style={deferredSectionStyle}>
           <div className="container mx-auto max-w-7xl px-4">
-            <div className="mx-auto max-w-4xl rounded-3xl border border-primary/10 bg-white p-8 text-center shadow-sm md:p-12">
-              <div className="space-y-6">
-                <h2 className="font-headline text-3xl text-primary">Are you ready to start learning job-ready skills?</h2>
-                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                  Get industry-focused training, career support, and placement assistance. Fill in your details above and take the first step towards your future.
-                </p>
-                <p className="text-base font-semibold text-primary">
-                  Launch Your Career. Not Just a Course.
-                </p>
-                <div className="flex justify-center">
-                  <ScrollToLeadButton
-                    size="lg"
-                    className="h-14 bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90"
-                  >
-                    Enquire Now
-                  </ScrollToLeadButton>
+            <div className="mx-auto max-w-4xl">
+              <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+                <div className="space-y-6">
+                  <h2 className="font-headline text-3xl text-primary">Are you ready to start learning job-ready skills?</h2>
+                  <p className="text-lg text-muted-foreground">
+                    Get industry-focused training, career support, and placement assistance. Fill in your details and take the first step towards your future.
+                  </p>
+                  <p className="text-base font-semibold text-primary">
+                    Launch Your Career. Not Just a Course.
+                  </p>
                 </div>
+                <LeadForm />
               </div>
             </div>
           </div>
