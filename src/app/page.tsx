@@ -6,6 +6,7 @@ import LeadForm from "@/components/LeadForm";
 import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Build from "next/dist/build";
 
 const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773820493/Final-Logo_exeo3n.png";
 const HERO_BG_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774679097/P1510960_1_1_1_wrknkg.jpg";
@@ -71,10 +72,10 @@ export default function LandingPage() {
                   Admissions Open 2026-27
                 </Badge>
                 <h1 className="font-headline text-4xl leading-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:text-6xl">
-                  We Don&apos;t Just Teach Design. We Build Careers
+                  Design Spaces. <br /> Build a Career That Grows
                 </h1>
                 <p className="max-w-xl text-xl text-white">
-                  Join INSD - India&apos;s Skill School and build job-ready graphic design skills for a billion-dollar industry.
+                  Join INSD - India&apos;s Skill School and build job-ready <span className="font-bold">Interior Designing</span> skills for a billion-dollar industry.
                 </p>
                 <div className="flex max-w-2xl flex-wrap gap-2">
                   {[
@@ -134,16 +135,23 @@ export default function LandingPage() {
               </div>
               <div className="space-y-6">
                 <SectionHeader
-                  title="Skills. Careers. Placements. Come First."
-                  subtitle="At INSD, we focus on what truly matters: skills, careers, and placements."
-                  centered={false}
+                  title="Skills First. Careers Next. Placements Always."
+                  subtitle={
+                <>
+                  At INSD, we focus on what truly matters,{" "}
+                  <span className="font-semibold">practical skills</span>,{" "}
+                  <span className="font-semibold">strong careers</span>, and{" "}
+                  <span className="font-semibold">real placements</span>.
+                </>
+            }
+                centered={false}
                 />
 
                 <ul className="space-y-4">
                   {[
-                    "Skills over degrees",
-                    "Careers over courses",
-                    "Industry readiness over theory",
+                    "Hands-on learning over theory-heavy education",
+                    "Career-focused training over generic courses",
+                    "Industry exposure over classroom-only teaching",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 font-medium text-primary">
                       <ShieldCheck className="h-6 w-6 text-secondary" />
@@ -151,11 +159,11 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-lg font-semibold text-primary">
-                  We build professionals, not just designers.
+                <p className="mt-4 text-lg font-bold text-primary">
+                  We don’t just teach design, we build professionals.
                 </p>
                 <p className="mt-2 text-lg leading-relaxed text-muted-foreground">
-                  From day one, your learning is focused on making you job-ready and helping you earn.
+                  From day one, your journey is aligned with becoming job-ready and confident.
                 </p>
               </div>
             </div>
@@ -167,22 +175,24 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
               <div className="space-y-6">
                 <SectionHeader
-                  title="Graphic Design is Powering India&apos;s Digital Growth"
-                  subtitle="India&apos;s digital and e-commerce sector is rapidly expanding."
+                  title="Interior Design is Shaping Modern Living. Learn What the Industry Actually Needs."
+                  subtitle="The demand for well-designed spaces is growing rapidly across India. This program is built to make you a professional interior designer, not just someone who knows tools."
                   centered={false}
                 />
                 <ul className="list-inside list-disc space-y-2 text-lg text-muted-foreground">
-                  <li>India&apos;s digital and e-commerce sector is rapidly expanding</li>
-                  <li>Businesses are increasing investment in branding and digital marketing</li>
-                  <li>Designers are in demand across startups, agencies, content platforms, and global brands</li>
+                  <li><span className="font-bold text-slate-600">Space Planning & Layout Design:</span> Understand functionality, flow, and efficient space usage</li>
+                  <li><span className="font-bold text-slate-600">Materials, Lighting & Furniture Design:</span> Work with textures, finishes, lighting concepts, and furniture planning</li>
+                  <li><span className="font-bold text-slate-600">Residential & Commercial Interiors:</span> Design real-world spaces across homes, offices, and retail</li>
+                  <li><span className="font-bold text-slate-600">Design Software & Visualization:</span> Learn industry tools to present your ideas professionally</li>
+                  <li><span className="font-bold text-slate-600">Portfolio & Live Projects:</span> Start building your portfolio from Day 1 with real projects</li>
                 </ul>
-                <p className="text-xl font-semibold text-primary">Graphic Design = Career-Ready Skill</p>
-                <p className="text-lg text-muted-foreground">With the right skills, you can work, grow, and earn.</p>
+                <p className="text-xl font-semibold text-primary">Interior Design = Career-Ready Skill</p>
+                <p className="text-lg text-muted-foreground">With the right training, you can design, grow, and earn.</p>
               </div>
               <div className="relative h-96 overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src={brandingImg?.imageUrl || DEFAULT_PLACEHOLDER}
-                  alt="Graphic design showcase"
+                  alt="Interior design showcase"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -196,7 +206,7 @@ export default function LandingPage() {
           <div className="container mx-auto max-w-7xl px-4">
             <SectionHeader
               title="Build Job-Ready Skills for Real Industry Roles"
-              subtitle="This program is designed to make you a professional graphic designer, not just someone who knows tools."
+              subtitle="This program is designed to make you a professional Interior designer, not just someone who knows tools."
             />
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -227,17 +237,23 @@ export default function LandingPage() {
         <section className="w-full bg-primary py-20 text-white" style={deferredSectionStyle}>
           <div className="container mx-auto max-w-7xl px-4">
             <SectionHeader
-              title="Choose Your Path. Build Your Career."
-              subtitle="No matter where you start - the outcome is the same: Industry-ready skills. Career opportunities. Placement support."
-              light
+              title="Choose Your Path. Create Your Future."
+                subtitle={
+                <>
+                  No matter where you begin, the goal remains the same:{" "}
+                  <span className="font-semibold">industry-ready skills</span>,{" "}
+                  <span className="font-semibold">career growth</span>, and{" "}
+                  <span className="font-semibold">placement support.</span>.
+                </>   
+              }           light
             />
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {[
-                { title: "Under Graduate Programs", duration: "3-4 Years", eligibility: "10+2", desc: "Comprehensive foundation for beginners." },
-                { title: "Post Graduate Programs", duration: "2 Years", eligibility: "Any 3 year Design Graduation", desc: "Advanced specialization for graduates." },
-                { title: "Advanced Diploma", duration: "1-2 Years", eligibility: "Any 10+2", desc: "Intensive industry-focused training." },
-                { title: "Diploma", duration: "1 Year", eligibility: "Any 10+2", desc: "Quick start into the design industry." },
-                { title: "Short Term Courses", duration: "3-6 Months", eligibility: "Any 10+2", desc: "Skill-specific certification courses." },
+                { title: "Under Graduate Programs", duration: "3-4 Years", eligibility: "10+2", desc: "Strong foundation for beginners." },
+                { title: "Post Graduate Programs", duration: "2 Years", eligibility: "Any 3 year Design Graduation", desc: "Advanced specialization." },
+                { title: "Advanced Diploma", duration: "1-2 Years", eligibility: "Any 10+2", desc: "Focused, industry-oriented training." },
+                { title: "Diploma", duration: "1 Year", eligibility: "Any 10+2", desc: "Quick entry into interior design careers." },
+                { title: "Short Term Courses", duration: "3-6 Months", eligibility: "Any 10+2", desc: "Skill-based certification programs." },
               ].map((item) => (
                 <Card key={item.title} className="group border-white/20 bg-white/10 transition-all hover:bg-white/20">
                   <CardContent className="flex h-full flex-col p-6 text-center">
@@ -267,11 +283,19 @@ export default function LandingPage() {
 
         <section className="relative w-full overflow-hidden bg-white py-24" style={deferredSectionStyle}>
           <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
-            <h2 className="font-headline text-4xl text-primary md:text-5xl">Your Future Won&apos;t Wait</h2>
+            <h2 className="font-headline text-4xl text-primary md:text-5xl">Start a Career. Not Just a Course.</h2>
             <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
-              The right skills can help you start earning.
+              The right skills can help you start earning sooner than you think. Turn your creativity into a profession that shapes real spaces.
             </p>
+            <p>Get industry-focused training, career guidance, and placement support. Fill in your details and begin your journey.</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <ScrollToLeadButton
+                variant="outline"
+                size="lg"
+                className="h-14 w-full border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-auto"
+              >
+                Learn More
+              </ScrollToLeadButton>
               <ScrollToLeadButton
                 size="lg"
                 className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
@@ -281,14 +305,7 @@ export default function LandingPage() {
               <ScrollToLeadButton
                 variant="outline"
                 size="lg"
-                className="h-14 w-full border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-auto"
-              >
-                Learn More
-              </ScrollToLeadButton>
-              <ScrollToLeadButton
-                variant="ghost"
-                size="lg"
-                className="h-14 w-full px-10 text-lg font-semibold text-primary sm:w-auto"
+                className="h-14 w-full border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-autogit remote add origin "
               >
                 Enquire Now
               </ScrollToLeadButton>

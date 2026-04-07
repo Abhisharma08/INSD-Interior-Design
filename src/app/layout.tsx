@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Belleza, Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -18,8 +17,8 @@ const belleza = Belleza({
 });
 
 export const metadata: Metadata = {
-  title: 'INSD | Premier Graphic Design Course in Delhi',
-  description: 'Turn your creativity into a career with INSD Delhi\'s Graphic Design programs. Industry-oriented curriculum with 100% placement support.',
+  title: 'INSD | Premier interior Design Course in Delhi',
+  description: 'Turn your creativity into a career with INSD Delhi\'s interior Design programs. Industry-oriented curriculum with 100% placement support.',
 };
 
 export default function RootLayout({

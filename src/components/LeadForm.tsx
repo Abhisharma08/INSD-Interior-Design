@@ -113,8 +113,8 @@ export default function LeadForm({ className }: { className?: string }) {
 
   return (
     <div className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}>
-      <h3 className="mb-2 text-2xl font-headline text-primary">Start Your Graphic Design Journey</h3>
-      <p className="mb-6 text-sm text-muted-foreground">Our counsellor will contact you shortly. No spam, only career guidance.</p>
+      <h3 className="mb-2 text-2xl font-headline text-primary">Begin Your Interior Design Journey</h3>
+      <p className="mb-6 text-sm text-muted-foreground">Our counsellor will reach out shortly. No spam, only career guidance.</p>
 
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <input type="hidden" name="lead_source" value={values.lead_source} />
@@ -180,7 +180,7 @@ export default function LeadForm({ className }: { className?: string }) {
         </div>
 
         <div className="space-y-1.5">
-          <label htmlFor="courseInterest" className="text-sm font-medium text-foreground">Interested Graphic Design Program</label>
+          <label htmlFor="courseInterest" className="text-sm font-medium text-foreground">Interested Interior Design Program</label>
           <select
             id="courseInterest"
             name="courseInterest"
