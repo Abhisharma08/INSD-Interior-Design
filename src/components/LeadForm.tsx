@@ -24,7 +24,7 @@ const defaultValues: FormValues = {
   email: "",
   phone: "",
   city: "",
-  lead_source: "Graphic Landing Page",
+  lead_source: "Interior Landing Page",
   courseInterest: "",
 }
 
