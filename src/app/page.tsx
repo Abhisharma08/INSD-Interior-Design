@@ -305,7 +305,7 @@ export default function LandingPage() {
               <ScrollToLeadButton
                 variant="outline"
                 size="lg"
-                className="h-14 w-full border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-autogit remote add origin "
+                className="h-14 w-15 border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-autogit remote add origin "
               >
                 Enquire Now
               </ScrollToLeadButton>
