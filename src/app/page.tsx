@@ -202,38 +202,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full bg-white py-20" style={deferredSectionStyle}>
-          <div className="container mx-auto max-w-7xl px-4">
-            <SectionHeader
-              title="Build Job-Ready Skills for Real Industry Roles"
-              subtitle="This program is designed to make you a professional Interior designer, not just someone who knows tools."
-            />
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { icon: <GraduationCap />, title: "Branding & Visual Identity", desc: "Build strong brand thinking and visual language skills." },
-                { icon: <Lightbulb />, title: "Social Media & Digital Design", desc: "Create engaging digital creatives for modern platforms." },
-                { icon: <Users />, title: "Typography & Layout Systems", desc: "Master structure, hierarchy, readability, and composition." },
-                { icon: <Star />, title: "Adobe Photoshop, Illustrator & InDesign", desc: "Gain practical command over industry-standard tools." },
-                { icon: <Layout />, title: "UI/UX Fundamentals", desc: "Understand user-centric interface and experience basics." },
-                { icon: <ShieldCheck />, title: "Portfolio & Live Projects", desc: "Job-ready learning starts from Day 1." },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="flex gap-4 rounded-xl border border-muted bg-white p-6 transition-all hover:border-secondary/30 hover:bg-muted/30"
-                >
-                  <div className="h-fit rounded-lg bg-primary/5 p-3 text-primary">
-                    {item.icon}
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-headline text-lg text-primary">{item.title}</h4>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="w-full bg-primary py-20 text-white" style={deferredSectionStyle}>
           <div className="container mx-auto max-w-7xl px-4">
             <SectionHeader
