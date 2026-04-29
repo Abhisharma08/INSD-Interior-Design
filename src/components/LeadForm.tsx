@@ -13,6 +13,8 @@ type FormValues = {
   city: string
   lead_source: string
   courseInterest: string
+  consulation_date: string
+  consulation_time: string
 }
 
 type FormErrors = Partial<Record<keyof FormValues, string>> & {
@@ -26,6 +28,8 @@ const defaultValues: FormValues = {
   city: "",
   lead_source: "Interior Landing Page",
   courseInterest: "",
+  consulation_date: "",
+  consulation_time: "",
 }
 
 function validateForm(values: FormValues) {
@@ -50,6 +54,14 @@ function validateForm(values: FormValues) {
 
   if (!values.courseInterest) {
     errors.courseInterest = "Please select a course."
+  }
+
+  if (!values.consulation_date) {
+    errors.consulation_date = "Please select a consultation date."
+  }
+
+  if (!values.consulation_time) {
+    errors.consulation_time = "Please select a consultation time."
   }
 
   return errors
@@ -113,7 +125,7 @@ export default function LeadForm({ className }: { className?: string }) {
 
   return (
     <div className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}>
-      <h3 className="mb-2 text-2xl font-headline text-primary">Begin Your Interior Design Journey</h3>
+      <h3 className="mb-2 text-2xl font-headline text-primary">BOOK A FREE CONSULTATION</h3>
       <p className="mb-6 text-sm text-muted-foreground">Our counsellor will reach out shortly. No spam, only career guidance.</p>
 
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -196,6 +208,34 @@ export default function LeadForm({ className }: { className?: string }) {
             <option value="short-term">Short Term Course</option>
           </select>
           {errors.courseInterest ? <p className="text-sm text-destructive">{errors.courseInterest}</p> : null}
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="space-y-1.5">
+            <label htmlFor="consulation_date" className="text-sm font-medium text-foreground">Consultation Date</label>
+            <input
+              id="consulation_date"
+              name="consulation_date"
+              type="date"
+              value={values.consulation_date}
+              onChange={handleChange}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            />
+            {errors.consulation_date ? <p className="text-sm text-destructive">{errors.consulation_date}</p> : null}
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="consulation_time" className="text-sm font-medium text-foreground">Consultation Time</label>
+            <input
+              id="consulation_time"
+              name="consulation_time"
+              type="time"
+              value={values.consulation_time}
+              onChange={handleChange}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            />
+            {errors.consulation_time ? <p className="text-sm text-destructive">{errors.consulation_time}</p> : null}
+          </div>
         </div>
 
         {errors.submit ? (

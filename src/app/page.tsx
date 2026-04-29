@@ -110,7 +110,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-sm italic text-white/70">
-                  * Limited Seats Available. Next batch starts soon.
+                  BOOK A FREE CONSULTATION. LIMITED SPOTS AVAILABLE
                 </p>
               </div>
               <div id="lead-form-top">
@@ -292,7 +292,7 @@ export default function LandingPage() {
                     Get industry-focused training, career support, and placement assistance. Fill in your details and take the first step towards your future.
                   </p>
                   <p className="text-base font-semibold text-primary">
-                    Launch Your Career. Not Just a Course.
+                    BOOK A FREE CONSULTATION. LIMITED SPOTS AVAILABLE
                   </p>
                 </div>
                 <LeadForm />

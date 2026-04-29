@@ -11,6 +11,8 @@ export async function submitToHubSpot(data: {
   city: string;
   lead_source: string;
   courseInterest: string;
+  consulation_date: string;
+  consulation_time: string;
 }) {
   const accessToken = process.env.HUBSPOT_ACCESS_TOKEN;
 
@@ -40,7 +42,9 @@ export async function submitToHubSpot(data: {
           // Mapping course interest to a standard or custom property
           // Using 'lifecyclestage' or a custom 'course_interest' property if exists
           // For now, we'll use 'notes' via associations or just standard properties
-          jobtitle: `Interested in: ${data.courseInterest}`, 
+          jobtitle: `Interested in: ${data.courseInterest}`,
+          consulation_date: data.consulation_date,
+          consulation_time: data.consulation_time,
         },
       }),
     });
