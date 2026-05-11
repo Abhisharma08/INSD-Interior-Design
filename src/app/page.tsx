@@ -8,7 +8,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Build from "next/dist/build";
 
-const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773820493/Final-Logo_exeo3n.png";
+const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778345781/INSD-Logo_Horizontal_fhm4u5.jpg";
 const HERO_BG_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774679097/P1510960_1_1_1_wrknkg.jpg";
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/placeholder/800/600";
 

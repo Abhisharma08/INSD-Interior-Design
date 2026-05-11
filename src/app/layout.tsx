@@ -19,6 +19,9 @@ const belleza = Belleza({
 export const metadata: Metadata = {
   title: 'INSD | Premier Interior Design Course in Delhi',
   description: 'Turn your creativity into a career with INSD Delhi\'s Interior Design programs. Industry-oriented curriculum with 100% placement support.',
+  icons: {
+    icon: 'https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778345780/INSD-Logo_Half-logo_wqbynu.jpg',
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +33,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${belleza.variable}`}>
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="icon" href="https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778345780/INSD-Logo_Half-logo_wqbynu.jpg" />
+        <link rel="apple-touch-icon" href="https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778345780/INSD-Logo_Half-logo_wqbynu.jpg" />
         <Script
           id="google-tag-manager"
           strategy="lazyOnload"
