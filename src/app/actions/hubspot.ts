@@ -21,9 +21,34 @@ export async function submitToHubSpot(data: {
     return { success: false, error: 'Server configuration error.' };
   }
 
+  function parseConsultationTimestamp(date: string, time: string) {
+    if (!date || !time) {
+      return null;
+    }
+
+    const dateTime = new Date(`${date}T${time}:00`);
+    return Number.isNaN(dateTime.valueOf()) ? null : dateTime.valueOf();
+  }
+
   try {
     const [firstname, ...lastnameParts] = data.name.trim().split(/\s+/);
     const lastname = lastnameParts.join(' ');
+    const consultationTimestamp = parseConsultationTimestamp(data.consulation_date, data.consulation_time);
+
+    const properties: Record<string, string | number> = {
+      email: data.email,
+      firstname: firstname,
+      lastname: lastname || '',
+      phone: data.phone,
+      city: data.city,
+      lead_source: data.lead_source,
+      jobtitle: `Interested in: ${data.courseInterest}`,
+      consulation_date: data.consulation_date,
+    };
+
+    if (consultationTimestamp !== null) {
+      properties.consulation_time = consultationTimestamp;
+    }
 
     const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
       method: 'POST',
@@ -32,20 +57,7 @@ export async function submitToHubSpot(data: {
         Authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify({
-        properties: {
-          email: data.email,
-          firstname: firstname,
-          lastname: lastname || '',
-          phone: data.phone,
-          city: data.city,
-          lead_source: data.lead_source,
-          // Mapping course interest to a standard or custom property
-          // Using 'lifecyclestage' or a custom 'course_interest' property if exists
-          // For now, we'll use 'notes' via associations or just standard properties
-          jobtitle: `Interested in: ${data.courseInterest}`,
-          consulation_date: data.consulation_date,
-          consulation_time: data.consulation_time,
-        },
+        properties,
       }),
     });
 
