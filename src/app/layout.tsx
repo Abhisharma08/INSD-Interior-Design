@@ -46,6 +46,13 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NSTZP4" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
         {children}
+        <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://widgets.in4.nopaperforms.com/emwgts.js";
+          document.body.appendChild(s);
+        `}} />
       </body>
     </html>
   );

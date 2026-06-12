@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowRight, GraduationCap, Layout, Lightbulb, ShieldCheck, Star, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import LeadForm from "@/components/LeadForm";
 import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -113,8 +112,8 @@ export default function LandingPage() {
                   BOOK A FREE CONSULTATION. LIMITED SPOTS AVAILABLE
                 </p>
               </div>
-              <div id="lead-form-top">
-                <LeadForm />
+              <div id="lead-form-top" style={{ height: '560px' }}>
+                <div className="npf_wgts" data-height="560px" data-w="df1baf18e63688d3ed4a8847f1cfbdc4"></div>
               </div>
             </div>
           </div>
@@ -295,7 +294,9 @@ export default function LandingPage() {
                     BOOK A FREE CONSULTATION. LIMITED SPOTS AVAILABLE
                   </p>
                 </div>
-                <LeadForm />
+                <div style={{ height: '620px' }}>
+                  <div className="npf_wgts" data-height="620px" data-w="df1baf18e63688d3ed4a8847f1cfbdc4"></div>
+                </div>
               </div>
             </div>
           </div>
